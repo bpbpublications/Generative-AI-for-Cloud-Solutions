@@ -1,0 +1,28 @@
+endpoints:
+  - name: completions-claude
+    endpoint_type: llm/v1/completions
+    model:
+      provider: bedrock
+      name: "anthropic.claude-v2:1"
+      config:
+        aws_config:
+          aws_region: REGION
+          aws_role_arn: "ROLE_ARN"
+  - name: completions-meta
+    endpoint_type: llm/v1/completions
+    model:
+      provider: bedrock
+      name: meta.llama2-70b-chat-v1
+      config:
+        aws_config:
+          aws_region: REGION
+          aws_role_arn: "ROLE_ARN"
+  - name: completions-titan
+    endpoint_type: llm/v1/completions
+    model:
+      provider: bedrock
+      name: amazon.titan-text-express-v1
+      config:
+        aws_config:
+          aws_region: REGION
+          aws_role_arn: "ROLE_ARN"
